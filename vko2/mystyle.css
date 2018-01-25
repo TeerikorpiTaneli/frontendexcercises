@@ -1,0 +1,24 @@
+body {
+	margin-left: 5%;
+	font-family: "Roboto", sans-serif;
+	background-image: url(./images/circles-dark.png);
+}
+
+header, footer {
+	text-align: center;
+	color: red;
+}
+
+h1, h2, h3, h4, h5 {
+	text-align: center;
+	color: red;
+}
+
+article {
+	font-size: 12;
+}
+
+a {
+	text-decoration: none;
+	text-transform: capitalize;
+}
