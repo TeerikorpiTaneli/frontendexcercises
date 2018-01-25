@@ -1,3 +1,1 @@
-# haloo
-
-Muutos tehty selaimessa lol
+# Repository for the excercises during Front-End development course
