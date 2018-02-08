@@ -20,13 +20,32 @@
 		<input type="text" class="form-control" id="second">
 	</div>
 	<br>
-	<input type="button" value="+" class="plus" field="quantity" />
-	<input type="button" value="-" class="minus" field="quantity" />
+	<input id="button1" type="button" value="+" class="plus" field="quantity" />
+	<input id="button2" type="button" value="-" class="minus" field="quantity" />
 </form>
+
+<div class="container">
+	<p class="result" id="sum"></p>
+	<p class="result" id="sub"></p>
+</div>
 
 <script>
   $(document).ready(function() {
-    // Insert your code here
+  	$("#button1").on("click", function() {
+  		var a = parseInt($("#first").val(), 10);
+  		var b = parseInt($("#second").val(), 10);
+  		var x = a + b;
+  		$("#sum").text(x);
+  	});
+
+
+  	$("#button2").on("click", function() {
+  		var a = parseInt($("#first").val(), 10);
+  		var b = parseInt($("#second").val(), 10);
+  		var x = a - b;
+  		$("#sub").text(x);
+  	})
+
   });
 </script>
 </body>
