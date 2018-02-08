@@ -4,19 +4,38 @@
   <title>jQuery</title>  
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+ <style>
+
+ 	body{
+ 		padding-top: 50px;
+ 		padding-left: 50px;
+ 		padding-right: 50px;
+
+ 	}
+
+ 	.alert {
+ 		width: 10%;
+ 		height: 50px;
+ 	}
+
+ 	.form-group {
+ 		width: 40%;
+ 	}
+ </style>
 </head>
 <body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-<form class="form-inline">
+<form class="form-group">
 	<div class="form-group">
-		<label for="first"> 1st </label>
+		<label for="first"> Enter first number </label>
 		<input type="text" class="form-control" id="first">
 	</div>
 	<div class="form-group">
-		<label for="second"> 2nd </label>
+		<label for="second"> Enter second number </label>
 		<input type="text" class="form-control" id="second">
 	</div>
 	<br>
@@ -24,8 +43,12 @@
 	<input id="button2" type="button" value="-" class="minus" field="quantity" />
 </form>
 
-<div class="container">
+<p>Sum:</p>
+<div class="alert alert-info">
 	<p class="result" id="sum"></p>
+</div>
+<p>Substract:</p>
+<div class="alert alert-danger">
 	<p class="result" id="sub"></p>
 </div>
 
