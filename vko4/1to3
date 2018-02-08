@@ -1,0 +1,60 @@
+1-3 Excercises Text
+
+Excercises 1-3
+
+1.
+
+a) You can select all <p>-elements by using following jQuery selector: $("p")
+
+b) Selecting the first <p>-element you can use selector: $("p:first")
+
+c) Selecting all the <p>-elements with id="info" you can use selector: $("#info")
+
+
+2.
+
+a) You can change the text inside an <p>-element by selecting all <p> elements and using text() method: $("p").text("Insert your message here!);
+
+b) If you don't want to change the text, you can append to a paragraph element using append() similarly like text(): $("p").append("Append the text");
+
+c) Changing color to red you can use css(): $("p").css("color", "red");
+
+
+3.
+
+a) Adding a listener to hide a paragraph element upon clicking,  can be done by using this:
+
+$(document).ready(function(){
+	$("p:first").click(function(){
+		$(this).hide();
+	});
+});
+
+
+b)  Adding a listener to all <p> elements to hide when double clicking can be achieved with this:
+
+$(document).ready(function(){
+	$("p").dblclick(function(){
+		$(this).hide();
+	});
+});
+
+
+c) Adding button to hide all <p> elements and change button text to 'pressed' (You need to have the buttons in the HTML so you can use them, lets think that buttons id is "button"):
+
+$(document).ready(function(){
+	$("#button").click(function(){
+		$("p").hide();
+		$("#button").text("Pressed");
+	});
+});
+
+
+d) Adding a listener to button that opens an alert box and show the first <p> text in it *** I couldn't get this one to work. Here is something I tried to do and thought that it would be working :D *** :
+
+$(document).ready(function(){
+	$("button").click(function(){
+		alert($("p:first"));
+
+	})
+})
