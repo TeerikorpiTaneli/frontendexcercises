@@ -32,9 +32,11 @@ class App extends Component {
           </form>
         </div>
         <div>
-          <ul>
+        <table>
+          <tr>
             {this.state.todos.map((item, index) => <li key={index}>{item}</li>)}
-          </ul>
+          </tr>
+        </table>
         </div>          
       </div>    
     );
