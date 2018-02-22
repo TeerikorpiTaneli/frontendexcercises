@@ -5,17 +5,21 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {description: '', todos: []}
+    this.state = {description: '', todos: [], date: ''}
   }
 
   inputChanged = (event) => {
     this.setState({description: event.target.value});
   }
 
+  inputChanged2 = (event) => {
+    this.setState({date: event.target.value});
+  }
+
   addTodo = (event) => {
     event.preventDefault();
     this.setState({
-      todos: [...this.state.todos, this.state.description]
+      todos: [...this.state.todos, this.state.description, this.state.date]
     });
   }
 
@@ -25,18 +29,29 @@ class App extends Component {
         <div className="App-header">
           <h2>Simple Todolist</h2>
         </div>
-        <div>
+        <div className="form">
           <form onSubmit={this.addTodo}>
-            <input type="text" onChange={this.inputChanged} value={this.state.description}/>
+          <legend>Add todo: </legend>
+            Description: <input type="text" onChange={this.inputChanged} value={this.state.description}/>
+            Date: <input type="date" onChange={this.inputChanged2} value={this.state.date}/>
             <input type="submit" value="Add"/>
           </form>
         </div>
         <div>
-        <table>
-          <tr>
-            {this.state.todos.map((item, index) => <li key={index}>{item}</li>)}
-          </tr>
-        </table>
+
+            {
+              this.state.todos.map((item, index) => 
+
+              <table key={index}>
+                <tbody>
+                  <tr>
+                    <td><th>Description</th></td>
+                    <td><th>Date</th></td>
+                  </tr>
+                  <tr><th>{item}</th></tr>
+                </tbody>
+              </table>)
+            }
         </div>          
       </div>    
     );
