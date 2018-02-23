@@ -4,7 +4,17 @@ import './App.css';
 class TodoTable extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {description: '', date: '', todos: []}
 	}
+
+
+	 deleteTodo = (todoToBeDeleted) => {
+    var newItems = this.state.todos.filter((_item) => {
+      return _item != todoToBeDeleted
+    });
+
+    this.setState({ todos: newItems });
+  }
 
 	render() {
     return (

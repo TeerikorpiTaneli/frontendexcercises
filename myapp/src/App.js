@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import ReactTable from 'react-table';
+import 'react-table/react-table.css';
+
 
 class App extends Component {
   constructor(props) {
@@ -42,12 +45,12 @@ class App extends Component {
             <input type="submit" value="Add"/>
           </form>
         </div>
+
         <div>
-       
         <table>
             <tbody>
               <tr><th>Date</th><th>Description</th></tr>
-              {this.state.todos.map((item, index) => <tr key={index}><td>{item.date}</td><td>{item.description} <button onClick= { this.deleteTodo.bind(this, item) }>delete</button></td></tr>)}
+              {this.state.todos.map((item, index) => <tr key={index}><td>{item.date}</td><td>{item.description} </td><button onClick= { this.deleteTodo.bind(this, item) }>delete</button></tr>)}
             </tbody>
           </table>
         </div>    
