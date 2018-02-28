@@ -42,7 +42,7 @@ class App extends Component {
             <input type="text" name="description" onChange={this.inputChanged} value={this.state.description}/>
              Date:
             <input type="date" name="date" onChange={this.inputChanged} value={this.state.date}/>
-            <input type="submit" value="Add"/>
+            <input type="submit" value="Add" />
           </form>
         </div>
 
